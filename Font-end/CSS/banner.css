@@ -1,0 +1,54 @@
+.banner-container {
+    width: 100%;
+    overflow: hidden;
+    /* quá kích thước sẽ bị ẩn */
+    background-color: #001f5d;
+    color: white;
+    padding: 12px 0;
+    /* box-shadow tạo bóngcho tử
+    box-shadow: offset-x offset-y blur-radius color;
+    box-shadow: 
+    + không dihc theo chiều ngang
+    + dịch bóng xuống 4px 
+    + làm mở bóng 6px 
+    + đồ mờ  */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.scrolling-text {
+    display: inline-block;
+    /* white-space sử lý khoảng trắng 
+    nowrap có nghĩa là:
+🔹 Không cho phép trình duyệt tự động xuống dòng.
+🔹 Nội dung sẽ tràn ra ngoài nếu không đủ chỗ (trừ khi bạn giới hạn
+     bằng overflow: hidden hoặc text-overflow */
+    white-space: nowrap;
+    padding-left: 100%;
+    /*animation       Thuộc tính dùng để gọi hiệu ứng đã định nghĩa bằng @keyframes.
+    scroll-left     Tên của animation được định nghĩa ở `@keyframes scroll-left`.  
+    50s             thời gian hiệu ứng chạy
+    linear          Tốc độ chạy hiệu ứng là **đều đặn**, không nhanh/chậm dần. 
+    infinite        Lặp lại hiệu ứng **mãi mãi**, không dừng.   */
+    animation: scroll-left 50s linear infinite;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.separator {
+    margin: 0 30px;
+    color: white;
+}
+
+/* @keyframes scroll-left: Định nghĩa một animation mới tên là scroll-left.
+0%: Điểm bắt đầu của animation. Phần tử sẽ ở vị trí ban đầu (translateX(0%)), không di chuyển.
+100%: Điểm kết thúc của animation. Phần tử sẽ di chuyển sang trái hoàn toàn (translateX(-100%)), tức là ra ngoài màn hình. */
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
