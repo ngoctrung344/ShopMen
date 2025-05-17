@@ -1,0 +1,28 @@
+.header-banner {
+    width: 100%;
+    white-space: nowrap;
+    background: #001f5d;
+    color: white;
+    overflow: hidden;
+    padding: 5px 0;
+    position: relative;
+
+}
+
+.banner-text {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 50px;
+    animation: scrollText 2s linear infinite;
+    font-size: 30px;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
